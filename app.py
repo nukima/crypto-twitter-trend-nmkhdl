@@ -143,8 +143,8 @@ def update_graph_2(symbol_chosen):
         x='create_at',
         y='price',
         title=f'Price of {symbol_chosen}',
-        width=1900,
-        height=400
+        width=1920,
+        height=350
     )
 
     df_tweet = get_tweet_data()
@@ -154,8 +154,8 @@ def update_graph_2(symbol_chosen):
         x='create_at',
         y='trend_point',
         title=f'Trend Point of {symbol_chosen}',
-        width=1900,
-        height=400
+        width=1920,
+        height=350
     )
 
     fig3 = px.bar(
@@ -163,12 +163,12 @@ def update_graph_2(symbol_chosen):
         x='create_at',
         y='sentiment_point',
         title=f'Sentiment Point of {symbol_chosen}',
-        width=1900,
-        height=400
+        width=1920,
+        height=350
     )
 
     return (fig, fig2, fig3)
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
